@@ -7,8 +7,8 @@
     <ProjectGuid>{5F41E635-F62E-47B2-849F-DDFCE4087A96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASRR.Gaia</RootNamespace>
-    <AssemblyName>ASRR.Gaia</AssemblyName>
+    <RootNamespace>ASRR.Gaia.Node</RootNamespace>
+    <AssemblyName>ASRR.Gaia.Node</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -89,7 +89,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>5.0.0-rc2</Version>
+      <Version>4.7.15</Version>
     </PackageReference>
     <PackageReference Include="RabbitMQ.Client">
       <Version>6.2.4</Version>

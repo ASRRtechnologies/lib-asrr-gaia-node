@@ -6,6 +6,7 @@ using ASRR.Gaia.Service;
 using Newtonsoft.Json;
 using NLog;
 
+
 namespace ASRR.Gaia.Controller
 {
     public class GaiaRestCommunicator
@@ -35,12 +36,12 @@ namespace ASRR.Gaia.Controller
 
         public async Task UpdateNodeAsync()
         {
-            _logger.Info("Updating node");
+            // _logger.Info("Updating node");
             var payload = JsonConvert.SerializeObject(_localUptimeService.GetUpdate());
             var httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
             var client = new HttpClient();
             var response = await client.PutAsync("https://gaia.kube.asrr.nl/api/v1/application/update-node", httpContent);
-            _logger.Info(response);
+            // _logger.Info(response);
         }
     }
 }
