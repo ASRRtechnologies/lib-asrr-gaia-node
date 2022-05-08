@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Management;
 using ASRR.Gaia.Model.Dto;
 using Microsoft.VisualBasic.Devices;
 
@@ -40,7 +41,9 @@ namespace ASRR.Gaia.Service
                 id = _id,
                 os = _os,
                 user = _user,
-                totalRam = _totalRam
+                totalRam = _totalRam,
+                usedRam = System.Diagnostics.Process.GetCurrentProcess().VirtualMemorySize64,
+                profile = "local"
             };
         }
     }

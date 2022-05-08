@@ -10,7 +10,8 @@
         public string user { get; set; }
         public string ip { get; set; }
         public string os { get; set; }
-        public string usedRam { get; set; }
+        public long usedRam { get; set; }
         public long totalRam { get; set; }
+        public string profile { get; set; }
     }
 }

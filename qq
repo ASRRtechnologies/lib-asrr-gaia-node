@@ -1,0 +1,35 @@
+[1mdiff --git a/Model/Dto/NodeUpdate.cs b/Model/Dto/NodeUpdate.cs[m
+[1mindex e5ea746..74b54aa 100644[m
+[1m--- a/Model/Dto/NodeUpdate.cs[m
+[1m+++ b/Model/Dto/NodeUpdate.cs[m
+[36m@@ -10,7 +10,8 @@[m
+         public string user { get; set; }[m
+         public string ip { get; set; }[m
+         public string os { get; set; }[m
+[31m-        public string usedRam { get; set; }[m
+[32m+[m[32m        public long usedRam { get; set; }[m
+         public long totalRam { get; set; }[m
+[32m+[m[32m        public string profile { get; set; }[m
+     }[m
+ }[m
+[1mdiff --git a/Service/NodeInformationService.cs b/Service/NodeInformationService.cs[m
+[1mindex 12459bb..7052be7 100644[m
+[1m--- a/Service/NodeInformationService.cs[m
+[1m+++ b/Service/NodeInformationService.cs[m
+[36m@@ -1,4 +1,5 @@[m
+ ﻿using System;[m
+[32m+[m[32musing System.Management;[m
+ using ASRR.Gaia.Model.Dto;[m
+ using Microsoft.VisualBasic.Devices;[m
+ [m
+[36m@@ -40,7 +41,9 @@[m [mnamespace ASRR.Gaia.Service[m
+                 id = _id,[m
+                 os = _os,[m
+                 user = _user,[m
+[31m-                totalRam = _totalRam[m
+[32m+[m[32m                totalRam = _totalRam,[m
+[32m+[m[32m                usedRam = System.Diagnostics.Process.GetCurrentProcess().VirtualMemorySize64,[m
+[32m+[m[32m                profile = "local"[m
+             };[m
+         }[m
+     }[m
