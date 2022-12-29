@@ -40,7 +40,8 @@ namespace ASRR.Gaia.Controller
             var payload = JsonConvert.SerializeObject(_localUptimeService.GetUpdate());
             var httpContent = new StringContent(payload, Encoding.UTF8, "application/json");
             var client = new HttpClient();
-            var response = await client.PutAsync("https://gaia.kube.asrr.nl/api/v1/application/update-node", httpContent);
+            var response =
+                await client.PutAsync("https://gaia.kube.asrr.nl/api/v1/application/update-node", httpContent);
             // _logger.Info(response);
         }
     }

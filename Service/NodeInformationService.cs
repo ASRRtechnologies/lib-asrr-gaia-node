@@ -27,7 +27,7 @@ namespace ASRR.Gaia.Service
             _id = Environment.UserDomainName + Environment.UserName;
             _os = Environment.OSVersion.VersionString;
             _user = Environment.UserName;
-            _totalRam = (long)_computerInfo.TotalPhysicalMemory;
+            _totalRam = (long) _computerInfo.TotalPhysicalMemory;
         }
 
         public NodeUpdate GetUpdate()
