@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Management;
+using System.Diagnostics;
 using ASRR.Gaia.Model.Dto;
 using Microsoft.VisualBasic.Devices;
 
@@ -7,15 +7,15 @@ namespace ASRR.Gaia.Service
 {
     public class NodeInformationService
     {
-        private string _company;
-        private string _project;
-        private string _application;
-        private string _machineName;
-        private string _id;
-        private string _os;
-        private string _user;
-        private long _totalRam;
-        private ComputerInfo _computerInfo;
+        private readonly string _application;
+        private readonly string _company;
+        private readonly ComputerInfo _computerInfo;
+        private readonly string _id;
+        private readonly string _machineName;
+        private readonly string _os;
+        private readonly string _project;
+        private readonly long _totalRam;
+        private readonly string _user;
 
         public NodeInformationService(string company, string project, string application)
         {
@@ -42,7 +42,7 @@ namespace ASRR.Gaia.Service
                 os = _os,
                 user = _user,
                 totalRam = _totalRam,
-                usedRam = System.Diagnostics.Process.GetCurrentProcess().VirtualMemorySize64,
+                usedRam = Process.GetCurrentProcess().VirtualMemorySize64,
                 profile = "local"
             };
         }

@@ -6,14 +6,13 @@ using ASRR.Gaia.Service;
 using Newtonsoft.Json;
 using NLog;
 
-
 namespace ASRR.Gaia.Controller
 {
     public class GaiaRestCommunicator
     {
+        private readonly NodeInformationService _localUptimeService;
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public bool isAllowed = false;
-        private readonly NodeInformationService _localUptimeService;
 
         public GaiaRestCommunicator(string company, string project, string application)
         {
