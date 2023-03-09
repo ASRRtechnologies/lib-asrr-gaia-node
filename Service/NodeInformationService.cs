@@ -1,7 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using ASRR.Gaia.Model.Dto;
+﻿using ASRR.Gaia.Model.Dto;
 using Microsoft.VisualBasic.Devices;
+using System;
+using System.Diagnostics;
 
 namespace ASRR.Gaia.Service
 {
@@ -27,7 +27,7 @@ namespace ASRR.Gaia.Service
             _id = Environment.UserDomainName + Environment.UserName;
             _os = Environment.OSVersion.VersionString;
             _user = Environment.UserName;
-            _totalRam = (long) _computerInfo.TotalPhysicalMemory;
+            _totalRam = (long)_computerInfo.TotalPhysicalMemory;
         }
 
         public NodeUpdate GetUpdate()

@@ -1,10 +1,10 @@
-﻿using System.Net.Http;
+﻿using ASRR.Gaia.Service;
+using Newtonsoft.Json;
+using NLog;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using ASRR.Gaia.Service;
-using Newtonsoft.Json;
-using NLog;
 
 namespace ASRR.Gaia.Controller
 {
