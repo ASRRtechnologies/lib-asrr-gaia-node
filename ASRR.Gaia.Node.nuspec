@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>ASRR</authors>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/ASRRtechnologies/lib-asrr-gaia-node</projectUrl>
+    <description>ASRR Uptime Tool Library</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>ASRR C# CoreLib Utility</tags>
+  </metadata>
+</package>
